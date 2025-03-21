@@ -8,7 +8,7 @@ $SecurePassword = Read-Host "Enter the new admin password" -AsSecureString
 $NewComputerName = Read-Host "Enter the new computer name"
 
 # Create new local admin account
-New-LocalUser -Name $NewAdminUser -Password $SecurePassword -FullName "Local Administrator" -Description "Custom Local Admin Account"
+New-LocalUser -Name $NewAdminUser -Password $SecurePassword -FullName $NewAdminUser
 
 # Add the new user to the Administrators group
 Add-LocalGroupMember -Group "Administrators" -Member $NewAdminUser
