@@ -25,8 +25,8 @@ execute "sudo cp /home/champuser/00-installer-config.yaml /etc/netplan/00-instal
 execute "sudo netplan apply"
 
 # Configure firewall for DHCP
-execute "sudo ufw allow 67/udp"
-execute "sudo ufw allow 68/udp"
+execute "sudo ufw allow 80/tcp"
+execute "sudo ufw allow 443/tcp"
 execute "sudo ufw reload"
 
 # Start and enable Nginx
