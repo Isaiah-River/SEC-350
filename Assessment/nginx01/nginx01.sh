@@ -12,6 +12,7 @@ execute() {
         exit 1
     fi
 }
+execute "sudo hostnamectl set-hostname nginx01-isaiah"
 
 # Backup and replace index file
 execute "sudo mv /var/www/html/index.nginx-debian.html /var/www/html/index.nginx-debian.html.old"
