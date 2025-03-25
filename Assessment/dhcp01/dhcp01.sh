@@ -13,6 +13,8 @@ execute() {
     fi
 }
 
+execute "sudo hostnamectl set-hostname dhcp01-isaiah"
+
 # Backup and replace Netplan config
 execute "sudo mv /etc/netplan/00-installer-config.yaml /etc/netplan/00-installer-config.yaml.old"
 execute "sudo cp /home/champuser/00-installer-config.yaml /etc/netplan/00-installer-config.yaml"
