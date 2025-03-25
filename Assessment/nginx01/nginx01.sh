@@ -24,10 +24,10 @@ execute "sudo cp /home/champuser/00-installer-config.yaml /etc/netplan/00-instal
 # Apply Netplan changes
 execute "sudo netplan apply"
 
-# Configure firewall rules
-execute "sudo firewall-cmd --zone=public --add-port=80/tcp --permanent"
-execute "sudo firewall-cmd --zone=public --add-port=443/tcp --permanent"
-execute "sudo firewall-cmd --reload"
+# Configure firewall for DHCP
+execute "sudo ufw allow 67/udp"
+execute "sudo ufw allow 68/udp"
+execute "sudo ufw reload"
 
 # Start and enable Nginx
 execute "sudo systemctl start nginx"
