@@ -6,11 +6,11 @@ network:
     ens160:
       dhcp4: false
       addresses:
-        - 172.16.50.3/29
+        - 172.16.150.5/24
       routes:
         - to: 0.0.0.0/0
-          via: 172.16.50.2
+          via: 172.16.150.2
       nameservers:
         addresses:
-          - 172.16.50.2
+          - 172.16.150.2
   version: 2
